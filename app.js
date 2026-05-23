@@ -11,7 +11,7 @@ let copyString = [
 
 
 const oneHundredResults = [];
-for (let i = 0; i < 1000000; i++) {
+for (let i = 0; i < 10000; i++) {
     string = [
         Array.from({ length }, (_, i) => i + 1),
         Array.from({ length }, (_, i) => i + 51)
@@ -33,6 +33,9 @@ for (let i = 0; i < 1000000; i++) {
         }
     }
 }
+console.log("Length", oneHundredResults.length);
+console.log("smallest: " + Math.min(...oneHundredResults));
+console.log("Biggest: " + Math.max(...oneHundredResults));
 console.log("Average: " + oneHundredResults.reduce((a, b) => a + b, 0) / oneHundredResults.length);
 function tieString(string) {
     const randomElementOne = selectRandomElement(string[0]);
